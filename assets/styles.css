@@ -223,6 +223,10 @@ body {
     top: 100%;
     visibility: visible;
   }
+
+  .navlabel {
+     color: white;
+  }
   
   .navbar .dropdown .dropdown ul {
     top: 0;
