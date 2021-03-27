@@ -33,7 +33,7 @@
 }
 
 body {
-    font-family: 'Monospace';
+  font-family: "Typewriter", 'Courier New', Courier, monospace;
     color: #555555;
   }
   
@@ -48,7 +48,7 @@ body {
   }
   
   h1, h2, h3, h4, h5, h6 {
-    /*font-family: "Monospace", Courier New;*/
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
     font-family: 'Typewriter';
   }
   
@@ -71,7 +71,8 @@ body {
   
   .back-to-top i {
     font-size: 28px;
-    color: #fff;
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
+    color: #14312A;
     line-height: 0;
   }
   
@@ -707,6 +708,7 @@ body {
   
   .navbar a i {
     font-size: 12px;
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
     line-height: 0;
     margin-left: 5px;
   }
@@ -739,14 +741,17 @@ body {
     font-size: 15px;
     text-transform: none;
     font-weight: 600;
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
   }
   
   .navbar .dropdown ul a i {
     font-size: 12px;
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
   }
   
   .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
     color: #b95422;
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
   }
   
   .navbar .dropdown:hover > ul {
@@ -757,12 +762,14 @@ body {
 
   .navlabel {
      color: white;
+     font-family: "Typewriter", 'Courier New', Courier, monospace;
   }
   
   .navbar .dropdown .dropdown ul {
     top: 0;
     left: calc(100% - 30px);
     visibility: hidden;
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
   }
   
   .navbar .dropdown .dropdown:hover > ul {
@@ -770,6 +777,7 @@ body {
     top: 0;
     left: 100%;
     visibility: visible;
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
   }
   
   @media (max-width: 1366px) {
@@ -913,17 +921,19 @@ body {
   
   #home h1 {
     margin: 0 0 30px 0;
-    font-size: 48px;
+    font-size: 70px;
     font-weight: 500;
     line-height: 56px;
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
     color: #fff;
   }
   
   #home h2 {
     color: #aeaeae;
     margin-bottom: 30px;
-    font-size: 14px;
+    font-size: 25px;
     font-weight: 400;
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
     text-transform: uppercase;
   }
   
@@ -933,6 +943,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 1px;
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
     display: inline-block;
     padding: 14px 30px;
     border-radius: 3px;
@@ -983,6 +994,7 @@ body {
   .section-title h2 {
     font-size: 40px;
     font-weight: bold;
+    font-family: "Typewriter", 'Courier New', Courier, monospace;
     text-transform: uppercase;
     margin-bottom: 15px;
     padding-bottom: 0;
