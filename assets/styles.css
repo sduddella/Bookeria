@@ -1240,7 +1240,7 @@ body {
 
   .form-control {
     display: block;
-    width: 100%;
+    width: 95%;
     height: calc(1.5em + 1rem);
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
