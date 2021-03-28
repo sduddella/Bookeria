@@ -702,7 +702,7 @@ body {
     justify-content: space-between;
     padding: 10px 0 10px 30px;
     font-size: 15px;
-    color: #151515;
+    color: #000000;
     text-transform: uppercase;
     white-space: nowrap;
     transition: 0.3s;
@@ -763,7 +763,7 @@ body {
   }
 
   .navlabel {
-     color: white;
+     color: black;
      font-family: "Typewriter", 'Courier New', Courier, monospace;
   }
   
