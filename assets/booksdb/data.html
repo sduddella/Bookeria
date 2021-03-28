@@ -1,0 +1,123 @@
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js">
+(function($) {
+    $(function() {
+        $('.update').live('change', function() {
+            formObject.run($(this));
+        });
+    });
+})(jQuery);
+
+var bookdata = [
+    {
+        title: "NASA Internship + Fellowship Program",
+        author: "",
+        genre: "MD, DC, VA", 
+        summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra elementum nisi at convallis. Nam ac est quis justo vulputate ultricies. Vivamus tristique malesuada elit nec consectetur. ",
+        link: "https://intern.nasa.gov/"
+    },
+    {
+        title: "Google: Computer Science Summer Institute",
+        author: "",
+        genre: "Online", 
+        summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut viverra elementum nisi at convallis. Nam ac est quis justo vulputate ultricies. Vivamus tristique malesuada elit nec consectetur. ",
+        link: "https://buildyourfuture.withgoogle.com/programs/computer-science-summer-institute/"
+    },
+];
+
+
+$(function(){
+    
+    showBookLisitings();
+
+    function showBookLisitings() {
+        var localbookData = localStorage.hasOwnProperty('bookdata') ? JSON.parse(localStorage.getItem('bookdata')) : bookdata;
+
+        if(!localStorage.hasOwnProperty('bookdata')) {
+            localStorage.setItem('bookdata',JSON.stringify(localbookData));
+        }
+
+        var bookListStr = "";
+
+        if(localbookData.length > 0) {
+            $.each(localbookData, function(i,book) {
+                bookListStr += '<div class="card card-body bg-light">';
+                bookListStr += '<h1>'+book.title+'</h1>';
+                bookListStr += '<h2>'+book.author+'</h2>';
+                bookListStr += '<p>'+book.genre+'</p>';
+                bookListStr += '<p>'+book.summary+'</p>';
+                bookListStr += '<p><a target="_blank" href="'+book.link+'">'+book.link+'</a></p>';
+                bookListStr += '</div>';
+            });
+        } else {
+            bookListStr = "<h2>No Books found!!!</h2>"
+        }
+        console.log(bookListStr[1])
+        $('#bookCards').html(bookListStr);
+    }
+
+
+   $('#submitBookPosting').on('click',function() {
+        var title = $('#title').val();
+        var author = $('#author').val();
+        var genre = $('#genre').val();
+        var summary = $('#summary').val();
+        var link = $('#link').val();
+
+        var bookObj = {};
+            bookObj.title = title;
+            bookObj.author = author;
+            bookObj.genre = genre;
+            bookObj.summary = summary;
+            bookObj.link = link;
+
+            //bookdata.push(bookObj);
+
+            //get exisiting Books:
+            var bookLisiting = JSON.parse(localStorage.getItem('bookdata'))
+            bookLisiting.unshift(bookObj);
+            localStorage.setItem('bookdata',JSON.stringify(bookLisiting));
+
+            showBookLisitings();
+
+    });
+
+
+    //BookSearch
+
+    $('.bookSearch').keyup(function(){
+
+        var bookSearchStr = $(this).val();
+
+        //if(bookSearchStr.length > 3) {
+            var bookLisiting = JSON.parse(localStorage.getItem('bookdata'))
+
+            var bookCardsBySearch = [];
+
+            $.each(bookLisiting,function(i,book){ 
+                if ((book.title.indexOf(bookSearchStr) !== -1 ) || ((book.location.indexOf(bookSearchStr) !== -1 ) ) || ((book.description.indexOf(bookSearchStr) !== -1 ) ) )   {
+                    bookCardsBySearch.push(book);
+                }
+            })
+
+            var bookListStr = "";
+            if(bookCardsBySearch.length > 0) {
+                $.each(bookCardsBySearch, function(i,book) {
+                    bookListStr += '<div class="card card-body bg-light">';
+                    bookListStr += '<h1>'+book.title+'</h1>';
+                    bookListStr += '<h2>'+book.author+'</h2>';
+                    bookListStr += '<p>'+book.genre+'</p>';
+                    bookListStr += '<p>'+book.summary+'</p>';
+                    bookListStr += '<p><a target="_blank" href="'+book.link+'">'+book.link+'</a></p>';
+                    bookListStr += '</div>';
+                });
+            } else {
+                bookListStr = "<h2>No Books found!!!</h2>"
+            }
+            $('#bookCards').html('').html(bookListStr);
+            
+            //showBookLisitings();
+        //}
+    })
+    
+}) 
+</script>
