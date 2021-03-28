@@ -62,7 +62,7 @@ body {
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: #c79625;
+    background: #14312A;
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -77,7 +77,7 @@ body {
   }
   
   .back-to-top:hover {
-    background: #A4BDBE;
+    background: #1B0000;
     color: #fff;
   }
   
