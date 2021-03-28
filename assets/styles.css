@@ -729,7 +729,7 @@ body {
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    background: #A4BDBE;
+    background: #B2AC88;
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
     transition: 0.3s;
   }
@@ -763,7 +763,7 @@ body {
   }
 
   .navlabel {
-     color: black;
+     color: white;
      font-family: "Typewriter", 'Courier New', Courier, monospace;
   }
   
