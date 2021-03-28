@@ -90,6 +90,53 @@
       
         </main>
       
+        <main id="main">
+          <div class="row">
+              <div class="col-lg-8 mx-auto">
+                  <form id="bookForm" name="sentMessage" novalidate="novalidate">
+                      <div class="control-group">
+                          <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                              <h2>Email</h2>
+                              <input class="form-control" id="title" type="text" placeholder="Email" required="required" data-validation-required-message="Please enter your email" />
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <div class="control-group">
+                          <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                              <h2>Favorite Book</h2>
+                              <input class="form-control" id="author" type="email" placeholder="Favorite Book" required="required" data-validation-required-message="Please enter the author's name." />
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <div class="control-group">
+                          <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                              <h2>Favorite Genre</h2>
+                              <input class="form-control" id="genre" type="tel" placeholder="Genre" required="required" data-validation-required-message="Please enter the genre name of the book." />
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <div class="control-group">
+                          <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                              <h2>Favorite Author</h2>
+                              <textarea class="form-control" id="summary" rows="5" placeholder="Author" required="required" data-validation-required-message="Please enter a short summary."></textarea>
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <div class="control-group">
+                          <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                              <h2>Favorite Trope</h2>
+                              <input class="form-control" id="genre" type="tel" placeholder="Favorite Trope" required="required" data-validation-required-message="Please enter a valid link" />
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <br />
+                      <div id="success"></div>
+                      <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      </main>
           
         <!-- ======= Footer ======= -->
         <footer id="footer">
